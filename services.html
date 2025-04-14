@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title optimisé (mots-clés + localisation + USP) -->
+  <title>Services Traiteur Kinshasa | Mariage, Entreprise & Événements | Chris Traiteur</title>
+  <!-- Meta description ciblée (155 caractères) -->
+  <meta name="description" content="Service traiteur sur mesure à Kinshasa pour mariages, séminaires et événements privés. Menus personnalisés, décoration et chef à domicile. Devis gratuit !">
+  <!-- Balise canonical (éviter le duplicate content) -->
+  <link rel="canonical" href="https://www.christraiteur-kinshasa.com/services" />
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Open Graph / Social Cards -->
+  <meta property="og:title" content="Services Traiteur Haut de Gamme à Kinshasa | Chris Traiteur">
+  <meta property="og:description" content="Découvrez nos services traiteur pour événements à Kinshasa : cuisine raffinée, présentation élégante et service clé en main.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.christraiteur-kinshasa.com/services">
+  <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/service-mariage-kinshasa.jpg">
+  <!-- Préchargement des polices (améliore la vitesse) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Bootstrap 5.3.3 -->
+  <!--<link rel="stylesheet" href="cdn_modules/bootstrap@5.3.3/css/bootstrap.min.css" type="text/css" media="all" />-->
+  
+  <!-- CSS Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome (avec defer pour performance) -->
+  <!--<link rel="stylesheet" href="cdn_modules/font-awesome@6.7.2/css/all.min.css" type="text/css" media="all"/>-->
+  
+  <!-- Lien CDN pour Font Awesome 6.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- AOS Animation (à déplacer avant </body> si possible) -->
+  <!--<link rel="stylesheet" href="cdn_modules/aos@2.3.4/aos.css" type="text/css" media="all" />-->
+  
+  <!-- CSS AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- CSS personnalisé (optimisé) -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+  </noscript>
+  <!-- Schema Markup (à ajouter pour les services) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Traiteur pour événements",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Chris Traiteur",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kinshasa",
+          "addressCountry": "CD"
+        },
+        "telephone": "+243 XX XXX XXXX"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Traiteur",
+        "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Mariages",
+          "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Buffet de mariage"
+            }
+          }]
+        }]
+      }
+    }
+  </script>
+    <style>
+        /* Styles pour la page Services */
+        .services-hero {
+            background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(139, 0, 0, 0.85)), 
+                        url('../assets/services-bg.jpg') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            margin-top: 85.5px;
+            margin-bottom: 50px;
+        }
+        
+        .services-hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-title {
+            color: var(--rouge-vin);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .service-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .service-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--dore);
+            position: absolute;
+            left: 0;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: var(--dore);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .service-cta {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .service-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--dore);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .service-tabs {
+            justify-content: center;
+            margin-bottom: 40px;
+            border-bottom: none;
+        }
+        
+        .service-tabs .nav-link {
+            color: var(--gris-fonce);
+            font-weight: 600;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 5px;
+            position: relative;
+            background: transparent;
+            border-radius: 30px;
+        }
+        
+        .service-tabs .nav-link.active {
+            background: var(--rouge-vin);
+            color: white;
+        }
+        
+        .package-comparison {
+            background: var(--gris-clair);
+            padding: 80px 0;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-header {
+            background: var(--rouge-vin);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .comparison-row {
+            display: flex;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-feature {
+            flex: 1;
+            padding: 15px;
+            border-right: 1px solid #eee;
+            font-weight: 500;
+        }
+        
+        .comparison-package {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .comparison-package.highlight {
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .check-icon {
+            color: var(--dore);
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-tabs .nav-link {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+                margin: 0 3px;
+            }
+            
+            .comparison-row {
+                flex-direction: column;
+            }
+            
+            .comparison-feature {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                font-weight: 600;
+                background: #f8f9fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link active" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-services">
+        <!-- Hero Section -->
+        <section class="services-hero" data-aos="fade">
+            <div class="container">
+                <h1 class="mb-4">Nos Services Traiteur</h1>
+                <p class="lead">Des prestations sur mesure pour des événements exceptionnels</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <!-- Onglets -->
+                <ul class="nav service-tabs" id="serviceTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all">Tous</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="wedding-tab" data-bs-toggle="tab" data-bs-target="#wedding">Mariages</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="corporate-tab" data-bs-toggle="tab" data-bs-target="#corporate">Entreprises</button>
+                    </li>
+                </ul>
+
+                <!-- Contenu des onglets -->
+                <div class="tab-content" id="serviceTabsContent">
+                    <!-- Tous les services -->
+                    <div class="tab-pane fade show active" id="all">
+                        <!-- Service 1 -->
+                        <div class="service-card" data-aos="fade-up" data-category="wedding">
+                            <div class="position-relative">
+                                <img src="assets/services/wedding.jpg" class="service-img" alt="Service Mariage">
+                                <span class="service-badge">Le plus populaire</span>
+                            </div>
+                            <div class="service-content">
+                                <h2 class="service-title">Traiteur Mariage</h2>
+                                <span class="price-tag">À partir de 50€/personne</span>
+                                <p>Un service complet pour faire de votre mariage un moment gastronomique inoubliable, de la dégustation préalable au service en salle.</p>
+                                <ul class="service-features">
+                                    <li>Menu personnalisé avec dégustation</li>
+                                    <li>Service en salle professionnel</li>
+                                    <li>Options végétariennes/végétaliennes</li>
+                                    <li>Décoration de table incluse</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="galerie.html?filter=wedding" class="text-dore">
+                                        <i class="fas fa-images me-2"></i>Voir des réalisations
+                                    </a>
+                                    <a href="contact.html" class="btn btn-sm btn-dore">Demander un devis</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 2 -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-category="corporate">
+                            <img src="assets/services/corporate.jpg" class="service-img" alt="Service Entreprise">
+                            <div class="service-content">
+                                <h2 class="service-title">Événements d'Entreprise</h2>
+                                <span class="price-tag">À partir de 35€/personne</span>
+                                <p>Des solutions adaptées pour vos cocktails, séminaires ou lancements de produit, avec un service discret et professionnel.</p>
+                                <ul class="service-features">
+                                    <li>Plateaux-repas élégants</li>
+                                    <li>Options finger food créatives</li>
+                                    <li>Service continu</li>
+                                    <li>Personnalisation du branding</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="galerie.html?filter=corporate" class="text-dore">
+                                        <i class="fas fa-images me-2"></i>Voir des réalisations
+                                    </a>
+                                    <a href="contact.html" class="btn btn-sm btn-dore">Demander un devis</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ajoutez 3 autres services -->
+                    </div>
+                    
+                    <!-- Services Mariage -->
+                    <div class="tab-pane fade" id="wedding">
+                        <!-- Contenu spécifique aux mariages -->
+                    </div>
+                    
+                    <!-- Services Entreprise -->
+                    <div class="tab-pane fade" id="corporate">
+                        <!-- Contenu spécifique aux entreprises -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Comparatif -->
+        <section class="package-comparison">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Nos Formules</h2>
+                <div class="comparison-table" data-aos="fade-up">
+                    <div class="comparison-header">
+                        <h3>Comparatif des prestations</h3>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Services</div>
+                        <div class="comparison-package">Essentiel</div>
+                        <div class="comparison-package highlight">Premium</div>
+                        <div class="comparison-package">Sur Mesure</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Consultation préalable</div>
+                        <div class="comparison-package"><i class="fas fa-check check-icon"></i></div>
+                        <div class="comparison-package highlight"><i class="fas fa-check check-icon"></i></div>
+                        <div class="comparison-package"><i class="fas fa-check check-icon"></i></div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Dégustation des plats</div>
+                        <div class="comparison-package">-</div>
+                        <div class="comparison-package highlight"><i class="fas fa-check check-icon"></i></div>
+                        <div class="comparison-package"><i class="fas fa-check check-icon"></i></div>
+                    </div>
+                    <!-- Ajoutez 5-6 autres lignes -->
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Prix par personne</div>
+                        <div class="comparison-package">35€</div>
+                        <div class="comparison-package highlight">50€</div>
+                        <div class="comparison-package">Sur devis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-5 bg-light">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="mb-4">Un projet spécifique ?</h2>
+                <p class="mb-4">Nous créons des solutions sur mesure pour répondre à vos besoins particuliers.</p>
+                <a href="contact.html" class="btn btn-dore btn-lg">
+                    <i class="fas fa-calendar-check me-2"></i>Planifier une consultation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <!--<script type="text/javascript" src="cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>-->
+    
+    <!-- JS Bootstrap 5.3.3 (avec Popper inclus) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--<script type="text/javascript" src="cdn_modules/font-awesome@6.7.2/js/all.min.js"></script>-->
+    
+    <!-- AOS Animation JS -->
+    <!--<script type="text/javascript" src="cdn_modules/aos@2.3.4/aos.js"></script>-->
+    
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navigation');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+
+    <script>
+        // Filtrage des services
+        document.querySelectorAll('.service-tabs .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('data-bs-target');
+                
+                // Active l'onglet
+                document.querySelectorAll('.service-tabs .nav-link').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Affiche le contenu correspondant
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show', 'active'));
+                document.querySelector(target).classList.add('show', 'active');
+            });
+        });
+        
+        // Animation au scroll
+        const serviceCards = document.querySelectorAll('.service-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        serviceCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

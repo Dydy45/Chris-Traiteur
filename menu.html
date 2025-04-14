@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title optimisé pour les recherches "menu traiteur" + localisation -->
+    <title>Menus Traiteur Kinshasa | Buffets Mariage & Événements | Chris Traiteur</title>
+    <!-- Meta description incitative avec mots-clés -->
+    <meta name="description" content="Découvrez nos menus traiteur à Kinshasa : buffets mariage, cocktails dînatoires et repas d'affaires. Cuisine raffinée avec produits frais - Demandez notre carte !">
+    <!-- Balise canonical -->
+    <link rel="canonical" href="https://www.christraiteur-kinshasa.com/menus" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:title" content="Nos Menus Traiteur Exclusifs à Kinshasa | Chris Traiteur">
+    <meta property="og:description" content="Buffets gastronomiques et menus sur mesure pour vos événements à Kinshasa. Découvrez nos créations culinaires.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.christraiteur-kinshasa.com/menus">
+    <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/plat-signature-menu.jpg">
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap 5.3.3 -->
+    <!--<link rel="stylesheet" href="cdn_modules/bootstrap@5.3.3/css/bootstrap.min.css" type="text/css" media="all" />-->
+    
+    <!-- CSS Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (avec defer) -->
+    <!--<link rel="stylesheet" href="cdn_modules/font-awesome@6.7.2/css/all.min.css" type="text/css" media="all"/>-->
+    
+    <!-- Lien CDN pour Font Awesome 6.7.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- AOS Animation (à déplacer avant </body> si possible) -->
+    <!--<link rel="stylesheet" href="cdn_modules/aos@2.3.4/aos.css" type="text/css" media="all" />-->
+    
+    <!-- CSS AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS personnalisé (optimisé) -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <!-- Schema Markup pour Menu -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "Menus Traiteur Chris Traiteur Kinshasa",
+      "description": "Menus pour événements et mariages à Kinshasa",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.christraiteur-kinshasa.com/menus"
+      },
+      "hasMenuSection": {
+        "@type": "MenuSection",
+        "name": "Buffets Mariage",
+        "description": "Menus complets pour cérémonies à Kinshasa",
+        "hasMenuItem": {
+          "@type": "MenuItem",
+          "name": "Menu Or",
+          "description": "Buffet froid et chaud, 10 entrées, 15 plats principaux, dessert personnalisé",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "CDF",
+            "price": "1500000"
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+        /* Styles pour la page Menu */
+        .menu-hero {
+            background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), 
+                        url('../assets/menu-bg.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-top: 85.5px;
+            margin-bottom: 50px;
+        }
+        
+        .menu-tabs {
+            border-bottom: 2px solid #eee;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .menu-tabs .nav-link {
+            color: var(--gris-fonce);
+            font-weight: 600;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 5px;
+            position: relative;
+            background: transparent;
+        }
+        
+        .menu-tabs .nav-link.active {
+            color: var(--rouge-vin);
+            background: transparent;
+        }
+        
+        .menu-tabs .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .menu-category {
+            margin-bottom: 50px;
+        }
+        
+        .category-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: var(--rouge-vin);
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .menu-item-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .menu-item-title {
+            font-weight: 600;
+            color: var(--noir);
+            margin-bottom: 5px;
+        }
+        
+        .menu-item-description {
+            color: var(--gris-fonce);
+            font-size: 0.95rem;
+        }
+        
+        .menu-item-price {
+            font-weight: 700;
+            color: var(--dore);
+            font-size: 1.1rem;
+            min-width: 70px;
+            text-align: right;
+        }
+        
+        .menu-highlight {
+            position: relative;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+        
+        .menu-highlight::before {
+            content: 'Chef\'s Choice';
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--dore);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background: var(--rouge-vin);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .download-btn:hover {
+            background: var(--dore);
+            color: var(--rouge-vin);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+        }
+        
+        .download-btn i {
+            margin-right: 10px;
+        }
+        
+        /* Style pour les allergènes */
+        .allergenes {
+            font-size: 0.8rem;
+            color: var(--gris-fonce);
+            margin-top: 5px;
+        }
+        
+        .allergenes span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-tabs .nav-link {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .menu-item-price {
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link active" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-menu">
+        <!-- Hero Section -->
+        <section class="menu-hero" data-aos="fade">
+            <div class="container">
+                <h1 class="display-4 mb-3">Notre Carte</h1>
+                <p class="lead">Découvrez nos spécialités culinaires</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <!-- Onglets -->
+                <ul class="nav menu-tabs" id="menuTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="classique-tab" data-bs-toggle="tab" data-bs-target="#classique">Classique</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium">Premium</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="vegetarien-tab" data-bs-toggle="tab" data-bs-target="#vegetarien">Végétarien</button>
+                    </li>
+                </ul>
+
+                <!-- Contenu des onglets -->
+                <div class="tab-content" id="menuContent">
+                  <!-- Menu Classique -->
+                  <div class="tab-pane fade show active" id="classique">
+                    <!-- Plat en vedette -->
+                    <div class="menu-highlight" data-aos="fade-up">
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Poulet à la Moambé</h3>
+                          <p class="menu-item-description">Notre spécialité maison, poulet cuit lentement dans une sauce moambé crémeuse, servi avec du fufu frais</p>
+                          <div class="allergenes">
+                            <span><i class="fas fa-pepper-hot"></i> Épicé</span>
+                            <span><i class="fas fa-seedling"></i> Arachides</span>
+                          </div>
+                        </div>
+                        <div class="menu-item-price">28€</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Entrées -->
+                    <div class="menu-category" data-aos="fade-up">
+                      <h2 class="category-title">Entrées</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Samoussas Maison</h3>
+                          <p class="menu-item-description">Triangle de brick farci au choix : boeuf épicé, poisson ou légumes</p>
+                        </div>
+                        <div class="menu-item-price">8€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Beignets de Banane Plantin</h3>
+                          <p class="menu-item-description">Servis avec une sauce pimentée maison</p>
+                        </div>
+                        <div class="menu-item-price">7€</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Plats Principaux -->
+                    <div class="menu-category" data-aos="fade-up" data-aos-delay="100">
+                      <h2 class="category-title">Plats Principaux</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Poulet Yassa</h3>
+                          <p class="menu-item-description">Poulet mariné au citron et oignons, servi avec du riz brisé</p>
+                          <div class="allergenes">
+                            <span><i class="fas fa-wheat"></i> Gluten</span>
+                          </div>
+                        </div>
+                        <div class="menu-item-price">24€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Poisson Braisé</h3>
+                          <p class="menu-item-description">Capitaine du fleuve Congo, mariné aux épices et grillé au feu de bois</p>
+                        </div>
+                        <div class="menu-item-price">26€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Riz Jollof</h3>
+                          <p class="menu-item-description">Un riz savoureux mijoté avec une sauce tomate épicée, accompagné de morceaux de boeuf</p>
+                        </div>
+                        <div class="menu-item-price">22€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Fufu & Ndolé</h3>
+                          <p class="menu-item-description">Feuilles d’oseille amères mijotées avec pâte d’arachide, viande ou poisson, accompagnées de fufu</p>
+                          <div class="allergenes">
+                            <span><i class="fas fa-seedling"></i> Arachides</span>
+                          </div>
+                        </div>
+                        <div class="menu-item-price">25€</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Desserts -->
+                    <div class="menu-category" data-aos="fade-up" data-aos-delay="150">
+                      <h2 class="category-title">Desserts</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Gâteau à la patate douce</h3>
+                          <p class="menu-item-description">Gâteau moelleux à base de patate douce, vanille et muscade</p>
+                        </div>
+                        <div class="menu-item-price">6€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Salade de fruits exotiques</h3>
+                          <p class="menu-item-description">Mélange de mangue, ananas, papaye et jus de citron vert</p>
+                        </div>
+                        <div class="menu-item-price">5€</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Menu Premium -->
+                  <div class="tab-pane fade" id="premium">
+                    <div class="menu-highlight" data-aos="fade-up">
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Magret de Canard sauce mangue</h3>
+                          <p class="menu-item-description">Magret rôti à point, nappé d’une sauce mangue-gingembre, servi avec purée de patate douce</p>
+                        </div>
+                        <div class="menu-item-price">35€</div>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-category" data-aos="fade-up">
+                      <h2 class="category-title">Entrées</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Tartare de crevettes à l'avocat</h3>
+                          <p class="menu-item-description">Crevettes marinées et avocat frais, relevés d’un filet de citron vert</p>
+                        </div>
+                        <div class="menu-item-price">12€</div>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-category" data-aos="fade-up" data-aos-delay="100">
+                      <h2 class="category-title">Plats Principaux</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Filet de Bar au lait de coco</h3>
+                          <p class="menu-item-description">Bar tendre poché dans un lait de coco parfumé au citronnelle, servi avec riz jasmin</p>
+                        </div>
+                        <div class="menu-item-price">33€</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Menu Végétarien -->
+                  <div class="tab-pane fade" id="vegetarien">
+                    <div class="menu-highlight" data-aos="fade-up">
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Egusi Végétarien</h3>
+                          <p class="menu-item-description">Ragoût de graines de melon avec légumes variés, accompagné d’amala ou fufu de manioc</p>
+                        </div>
+                        <div class="menu-item-price">22€</div>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-category" data-aos="fade-up">
+                      <h2 class="category-title">Entrées</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Accras de légumes</h3>
+                          <p class="menu-item-description">Beignets croustillants aux légumes épicés</p>
+                        </div>
+                        <div class="menu-item-price">7€</div>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-category" data-aos="fade-up" data-aos-delay="100">
+                      <h2 class="category-title">Plats Principaux</h2>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Couscous de légumes aux épices douces</h3>
+                          <p class="menu-item-description">Couscous perlé accompagné de légumes rôtis et pois chiches</p>
+                        </div>
+                        <div class="menu-item-price">20€</div>
+                      </div>
+                      
+                      <div class="menu-item">
+                        <div class="menu-item-content">
+                          <h3 class="menu-item-title">Mafé de légumes</h3>
+                          <p class="menu-item-description">Sauce d’arachide douce aux légumes du marché, accompagnée de riz parfumé</p>
+                          <div class="allergenes">
+                            <span><i class="fas fa-seedling"></i> Arachides</span>
+                          </div>
+                        </div>
+                        <div class="menu-item-price">21€</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Bouton de téléchargement -->
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="assets/menus/menu-complet.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i> Télécharger la carte complète
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <!--<script type="text/javascript" src="cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>-->
+    
+    <!-- JS Bootstrap 5.3.3 (avec Popper inclus) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--<script type="text/javascript" src="cdn_modules/font-awesome@6.7.2/js/all.min.js"></script>-->
+    
+    <!-- AOS Animation JS -->
+    <!--<script type="text/javascript" src="cdn_modules/aos@2.3.4/aos.js"></script>-->
+    
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navigation');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+
+    <script>
+        // Animation des onglets
+        document.querySelectorAll('.menu-tabs .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.menu-tabs .nav-link.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

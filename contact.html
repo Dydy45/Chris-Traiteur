@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title optimisé (action + localisation + urgence) -->
+    <title>Contact | Chris Traiteur – Devis Gratuit & Rapide à Kinshasa</title>
+    <!-- Meta description incitative (150-160 caractères) -->
+    <meta name="description" content="Contactez Chris Traiteur pour un devis personnalisé à Kinshasa. ☎ +243 XX XXX XXXX | Service traiteur pour mariages, entreprises et événements privés.">
+    <!-- Balise canonical -->
+    <link rel="canonical" href="https://www.christraiteur-kinshasa.com/contact" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:title" content="Contactez Votre Traiteur à Kinshasa | Chris Traiteur">
+    <meta property="og:description" content="Demandez un devis gratuit pour votre événement. Réponse sous 24h !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.christraiteur-kinshasa.com/contact">
+    <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/contact-traiteur-kinshasa.jpg">
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap 5.3.3 -->
+    <!--<link rel="stylesheet" href="cdn_modules/bootstrap@5.3.3/css/bootstrap.min.css" type="text/css" media="all" />-->
+    
+    <!-- CSS Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (avec defer) -->
+    <!--<link rel="stylesheet" href="cdn_modules/font-awesome@6.7.2/css/all.min.css" type="text/css" media="all"/>-->
+    
+    <!-- Lien CDN pour Font Awesome 6.7.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- AOS Animation (à déplacer avant </body> si possible) -->
+    <!--<link rel="stylesheet" href="cdn_modules/aos@2.3.4/aos.css" type="text/css" media="all" />-->
+    
+    <!-- CSS AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- SweetAlert2 (pour les popups de confirmation) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- CSS personnalisé (optimisé) -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <!-- Schema Markup (LocalBusiness + ContactPoint) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Chris Traiteur Kinshasa",
+      "description": "Page de contact pour demander un devis traiteur à Kinshasa",
+      "url": "https://www.christraiteur-kinshasa.com/contact",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+243-XX-XXX-XXXX",
+        "contactType": "Customer Service",
+        "areaServed": "Kinshasa",
+        "availableLanguage": "French"
+      }
+    }
+    </script>
+    <style>
+        /* Styles pour la page Contact */
+        .contact-hero {
+            background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(139, 0, 0, 0.85)), 
+                        url('../assets/contact-bg.jpg') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            margin-top: 85.5px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-title {
+            color: var(--rouge-vin);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--dore);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--dore);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .submit-btn:hover {
+            background: var(--dore-clair);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .submit-btn i {
+            margin-right: 10px;
+        }
+        
+        .contact-info {
+            padding: 20px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--dore);
+        }
+        
+        .info-title {
+            color: var(--rouge-vin);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-title i {
+            margin-right: 15px;
+            color: var(--dore);
+            font-size: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .info-item i {
+            color: var(--dore);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--rouge-vin);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--dore);
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .notification-toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+            z-index: 1000;
+            overflow: hidden;
+            border-left: 5px solid #4CAF50;
+          }
+          
+          .notification-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+          
+          .toast-content {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+          }
+          
+          .toast-icon {
+            font-size: 28px;
+            margin-right: 15px;
+            flex-shrink: 0;
+          }
+          
+          .toast-icon.success {
+            color: #4CAF50;
+          }
+          
+          .toast-message {
+            flex-grow: 1;
+          }
+          
+          .toast-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+          }
+          
+          .toast-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+          }
+          
+          .toast-close {
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: #999;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+          }
+          
+          .toast-close:hover {
+            color: #333;
+          }
+          
+          /* Animation d'entrée */
+          @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          
+          /* Animation de sortie */
+          @keyframes slideOut {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(100px); opacity: 0; }
+          }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-contact">
+        <!-- Hero Section -->
+        <section class="contact-hero" data-aos="fade">
+            <div class="container">
+                <h1 class="mb-4">Contactez-nous</h1>
+                <p class="lead">Nous sommes à votre écoute pour créer l'événement parfait</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="contact-container">
+                    <!-- Formulaire de Contact -->
+                    <div class="contact-form" data-aos="fade-right">
+                      <h2 class="form-title">Envoyez-nous un message</h2>
+                      <!-- HTML pour le formulaire et la notification -->
+                      <form id="contactForm">
+                        <div class="form-group">
+                          <input type="text" name="nom" class="form-control" placeholder="Votre nom complet*" required>
+                          <div class="invalid-feedback">Veuillez entrer votre nom</div>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="email" class="form-control" placeholder="Votre email*" required>
+                          <div class="invalid-feedback">Veuillez entrer un email valide</div>
+                        </div>
+                        <div class="form-group">
+                          <input type="tel" name="telephone" class="form-control" placeholder="Votre téléphone*" required>
+                          <div class="invalid-feedback">Veuillez entrer votre numéro</div>
+                        </div>
+                        <div class="form-group">
+                          <select name="sujet" class="form-control" required>
+                            <option value="">Sujet de votre message*</option>
+                            <option>Demande de devis</option>
+                            <option>Question sur les menus</option>
+                            <option>Réservation</option>
+                            <option>Autre demande</option>
+                          </select>
+                          <div class="invalid-feedback">Veuillez sélectionner un sujet</div>
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" class="form-control" placeholder="Votre message*" required></textarea>
+                          <div class="invalid-feedback">Veuillez écrire votre message</div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                          <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                      </form>
+                      
+                      <div id="notificationToast" class="notification-toast">
+                        <div class="toast-content">
+                          <i class="fas fa-check-circle toast-icon success"></i>
+                          <div class="toast-message">
+                            <h4 class="toast-title">Message envoyé !</h4>
+                            <p class="toast-text">Nous vous recontacterons dans les plus brefs délais.</p>
+                          </div>
+                          <button class="toast-close">&times;</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Informations de Contact -->
+                    <div class="contact-info" data-aos="fade-left">
+                        <!-- Carte Adresse -->
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-map-marker-alt"></i> Notre Adresse
+                            </h3>
+                            <div class="info-content">
+                                <div class="info-item">
+                                    <i class="fas fa-building"></i>
+                                    <div>
+                                        <p>123 Avenue des Aviateurs</p>
+                                        <p>Gombe, Kinshasa</p>
+                                        <p>République Démocratique du Congo</p>
+                                    </div>
+                                </div>
+                                <a href="https://maps.google.com/?q=123+Avenue+des+Aviateurs,Gombe,Kinshasa" 
+                                   target="_blank" 
+                                   class="btn btn-outline-dore mt-3">
+                                    <i class="fas fa-directions me-2"></i>Itinéraire
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Carte Contact -->
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-phone-alt"></i> Nous Contacter
+                            </h3>
+                            <div class="info-content">
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <p>+243 000 000 000</p>
+                                        <p>Disponible 7j/7 de 8h à 20h</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <p>contact@christraiteur.cd</p>
+                                        <p>Réponse sous 24h</p>
+                                    </div>
+                                </div>
+                                <div class="social-links">
+                                    <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="#" target="_blank" title="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" target="_blank" title="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte Horaires -->
+                        <div class="info-card">
+                            <h3 class="info-title">
+                                <i class="fas fa-clock"></i> Horaires
+                            </h3>
+                            <div class="info-content">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <div>
+                                        <p><strong>Lundi - Vendredi:</strong> 8h - 18h</p>
+                                        <p><strong>Samedi:</strong> 9h - 16h</p>
+                                        <p><strong>Dimanche:</strong> Sur rendez-vous</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte Google Maps -->  
+                <div class="map-container" data-aos="fade-up">  
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.837947113038!2d15.297215315762954!3d-4.041342397060643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDInMjguOCJTIDE1wrAxOCcwMS4xIkU!5e0!3m2!1sfr!2scd!4v1620000000000!5m2!1sfr!2scd"   
+                          allowfullscreen=""   
+                          loading="lazy"></iframe>  
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-5 bg-light">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="mb-4">Prêt à organiser votre événement ?</h2>
+                <p class="mb-4">Notre équipe est disponible pour discuter de votre projet.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="tel:+243000000000" class="btn btn-dore btn-lg">
+                        <i class="fas fa-phone me-2"></i>Nous appeler
+                    </a>
+                    <a href="https://wa.me/243000000000" class="btn btn-success btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="notificationToast" class="notification-toast">
+      <div class="toast-content">
+        <i class="fas fa-check-circle toast-icon success"></i>
+        <div class="toast-message">
+          <h4 class="toast-title">Message envoyé !</h4>
+          <p class="toast-text">Nous vous recontacterons dans les plus brefs délais.</p>
+        </div>
+        <button class="toast-close">&times;</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <!--<script type="text/javascript" src="cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>-->
+    
+    <!-- JS Bootstrap 5.3.3 (avec Popper inclus) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--<script type="text/javascript" src="cdn_modules/font-awesome@6.7.2/js/all.min.js"></script>-->
+    
+    <!-- AOS Animation JS -->
+    <!--<script type="text/javascript" src="cdn_modules/aos@2.3.4/aos.js"></script>-->
+    
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navigation');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+    <!-- Ajoutez cette ligne dans le <head> ou avant la fermeture du </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <script>
+      // Initialisation d'EmailJS
+      (function() {
+        emailjs.init('n_DTiH8tkR_m7eWUP'); // Remplacez par votre User ID
+      })();
+      
+      // Fonctions pour la notification
+      function showNotification(type = 'success', message = 'Nous vous recontacterons dans les plus brefs délais.') {
+        const toast = document.getElementById('notificationToast');
+        const icon = toast.querySelector('.toast-icon');
+        const title = toast.querySelector('.toast-title');
+        const text = toast.querySelector('.toast-text');
+        
+        // Style selon le type
+        if (type === 'success') {
+          icon.className = 'fas fa-check-circle toast-icon success';
+          title.textContent = 'Message envoyé !';
+          toast.style.borderLeftColor = '#4CAF50';
+        } else {
+          icon.className = 'fas fa-times-circle toast-icon error';
+          title.textContent = 'Erreur d\'envoi';
+          toast.style.borderLeftColor = '#f44336';
+        }
+        
+        text.textContent = message;
+        toast.classList.add('show');
+        
+        // Fermer automatiquement après 5 secondes
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 5000);
+      }
+      
+      function hideNotification() {
+        document.getElementById('notificationToast').classList.remove('show');
+      }
+      
+      // Gestionnaire pour le bouton de fermeture
+      document.querySelector('.toast-close')?.addEventListener('click', hideNotification);
+      
+      // Validation et envoi du formulaire
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validation des champs
+        let isValid = true;
+        const requiredFields = this.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            field.classList.remove('is-invalid');
+          }
+        });
+        
+        if (!isValid) {
+          showNotification('error', 'Veuillez remplir tous les champs obligatoires.');
+          return;
+        }
+        
+        // Envoi du formulaire
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalContent = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+        submitBtn.disabled = true;
+        
+        emailjs.sendForm('service_73vh3vo', 'template_pflmbe5', this)
+          .then(function() {
+            showNotification();
+            document.getElementById('contactForm').reset();
+          })
+          .catch(function(error) {
+            console.error('Échec de l\'envoi:', error);
+            showNotification('error', 'Une erreur s\'est produite. Veuillez réessayer.');
+          })
+          .finally(function() {
+            submitBtn.innerHTML = originalContent;
+            submitBtn.disabled = false;
+          });
+      });
+    </script>
+    
+    <style>
+      /* Style optionnel pour le bouton de chargement */
+      .fa-spinner {
+        margin-right: 8px;
+      }
+      
+      /* Style pour les champs invalides */
+      .is-invalid {
+        border-color: #dc3545 !important;
+      }
+      
+      .invalid-feedback {
+        color: #dc3545;
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+        display: none;
+      }
+      
+      .is-invalid+.invalid-feedback {
+        display: block;
+      }
+    </style>
+    <script>
+        // Animation des éléments
+        const infoCards = document.querySelectorAll('.info-card');
+        infoCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

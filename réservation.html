@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver | Chris Traiteur – Devis Gratuit pour Événements à Kinshasa</title>
+    <meta name="description" content="Réservez votre traiteur à Kinshasa en 2 minutes ! Obtenez un devis personnalisé pour mariages, séminaires et fêtes. Service haut de gamme depuis 2010.">
+    <meta name="keywords" content="réservation traiteur Kinshasa, devis traiteur, organiser événement Kinshasa">
+    <link rel="canonical" href="https://www.christraiteur-kinshasa.com/reservation">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Réservez Votre Traiteur à Kinshasa | Chris Traiteur">
+    <meta property="og:description" content="Demandez un devis gratuit pour votre événement à Kinshasa. Buffets sur mesure et service clé en main.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.christraiteur-kinshasa.com/reservation">
+    <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/reservation-traiteur-kinshasa.jpg">
+    
+    <!-- Préchargements critiques -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Réservation Traiteur Kinshasa",
+      "description": "Formulaire de réservation pour les services traiteur de Chris Traiteur à Kinshasa",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://www.christraiteur-kinshasa.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Réservation",
+            "item": "https://www.christraiteur-kinshasa.com/reservation"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <style>
+        /* Styles améliorés pour la réservation */
+        .reservation-hero {
+            background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(139, 0, 0, 0.7)), 
+                        url('../assets/reservation-bg.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            margin-top: 85.5px;
+            margin-bottom: 50px;
+        }
+        
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .progress-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+        
+        .progress-bar {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            height: 3px;
+            background: var(--dore);
+            z-index: 2;
+            transition: width 0.5s ease;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 3;
+            width: 30%;
+        }
+        
+        .step span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e9ecef;
+            color: var(--gris-fonce);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .step.active span {
+            background: var(--dore);
+            color: white;
+        }
+        
+        .step p {
+            font-weight: 500;
+            color: var(--gris-fonce);
+            text-align: center;
+        }
+        
+        .step.active p {
+            color: var(--rouge-vin);
+            font-weight: 600;
+        }
+        
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .form-header h3 {
+            color: var(--rouge-vin);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: var(--dore);
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+        }
+        
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .btn-dore {
+            background: var(--dore);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-dore:hover {
+            background: var(--dore-clair);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-outline-dore {
+            border: 2px solid var(--dore);
+            color: var(--dore);
+            background: transparent;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline-dore:hover {
+            background: var(--dore);
+            color: white;
+        }
+        
+        /* Style pour l'étape de confirmation */
+        .confirmation-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--dore);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .confirmation-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .reservation-toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 380px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+            z-index: 1000;
+            overflow: hidden;
+            border-left: 5px solid #4CAF50;
+        }
+    
+        .reservation-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        .reservation-toast .toast-content {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .reservation-toast .toast-icon {
+            font-size: 32px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+    
+        .reservation-toast .toast-icon.success {
+            color: #4CAF50;
+        }
+    
+        .reservation-toast .toast-icon.error {
+            color: #f44336;
+        }
+    
+        .reservation-toast .toast-message {
+            flex-grow: 1;
+        }
+    
+        .reservation-toast .toast-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+    
+        .reservation-toast .toast-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+    
+        .reservation-toast .toast-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+    
+        .reservation-toast .toast-close:hover {
+            color: #333;
+        }
+    
+        .invalid-feedback {
+            color: #dc3545;
+            font-size: 0.875em;
+            margin-top: 0.25rem;
+            display: none;
+        }
+    
+        .is-invalid ~ .invalid-feedback,
+        .is-invalid + .invalid-feedback {
+            display: block;
+        }
+    
+        .form-check-input.is-invalid {
+            outline: 2px solid #dc3545;
+        }
+    
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    
+        .confirmation-error {
+            animation: pulse 0.5s ease-in-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .progress-steps {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .progress-steps::before {
+                top: 0;
+                left: 20px;
+                width: 3px;
+                height: 100%;
+            }
+            
+            .progress-bar {
+                top: 0;
+                left: 20px;
+                width: 3px;
+                height: 0%;
+            }
+            
+            .step {
+                flex-direction: row;
+                width: 100%;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+            
+            .step span {
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-reservation">
+      <section class="reservation-hero py-5 text-center">
+          <div class="container" data-aos="fade-up">
+              <h1 class="display-4 mb-3">Réservez votre événement</h1>
+              <p class="lead">Laissez-nous créer un moment inoubliable</p>
+          </div>
+      </section>
+  
+      <section class="py-5">
+          <div class="container">
+              <div class="progress-steps">
+                  <div class="progress-bar" style="width: 0%"></div>
+                  <div class="step active" data-step="1">
+                      <span>1</span>
+                      <p>Vos informations</p>
+                  </div>
+                  <div class="step" data-step="2">
+                      <span>2</span>
+                      <p>Détails événement</p>
+                  </div>
+                  <div class="step" data-step="3">
+                      <span>3</span>
+                      <p>Confirmation</p>
+                  </div>
+              </div>
+  
+              <form id="reservationForm" class="needs-validation" novalidate>
+                  <!-- Étape 1 -->
+                  <div class="form-step active" id="step1">
+                      <div class="form-header mb-4">
+                          <h3><i class="fas fa-user-circle me-2"></i>Informations personnelles</h3>
+                          <p>Remplissez vos coordonnées pour que nous puissions vous contacter</p>
+                      </div>
+                      
+                      <div class="row g-4">
+                          <div class="col-md-6">
+                              <label class="form-label">Nom complet*</label>
+                              <input type="text" class="form-control" name="fullname" placeholder="Votre nom" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Email*</label>
+                              <input type="email" class="form-control" name="email" placeholder="votre@email.com" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Téléphone*</label>
+                              <input type="tel" class="form-control" name="phone" placeholder="+243 XX XXX XX XX" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Société (optionnel)</label>
+                              <input type="text" class="form-control" name="company" placeholder="Nom de votre entreprise">
+                          </div>
+                      </div>
+                      
+                      <div class="btn-group">
+                          <div></div>
+                          <button type="button" class="btn btn-dore next-step">
+                              Suivant <i class="fas fa-arrow-right ms-2"></i>
+                          </button>
+                      </div>
+                  </div>
+  
+                  <!-- Étape 2 -->
+                  <div class="form-step" id="step2">
+                      <div class="form-header mb-4">
+                          <h3><i class="fas fa-calendar-alt me-2"></i>Détails de l'événement</h3>
+                          <p>Décrivez-nous votre projet pour un devis personnalisé</p>
+                      </div>
+                      
+                      <div class="row g-4">
+                          <div class="col-md-6">
+                              <label class="form-label">Type d'événement*</label>
+                              <select class="form-control" name="event_type" required>
+                                  <option value="">-- Sélectionnez --</option>
+                                  <option>Mariage</option>
+                                  <option>Anniversaire</option>
+                                  <option>Événement d'entreprise</option>
+                                  <option>Cocktail</option>
+                                  <option>Autre</option>
+                              </select>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Date*</label>
+                              <input type="date" class="form-control" name="event_date" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Nombre d'invités*</label>
+                              <input type="number" class="form-control" name="guests" min="10" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label">Budget estimé (optionnel)</label>
+                              <select class="form-control" name="budget">
+                                  <option value="">-- Choisissez --</option>
+                                  <option>Moins de 1.000€</option>
+                                  <option>1.000€ - 2.500€</option>
+                                  <option>2.500€ - 5.000€</option>
+                                  <option>Plus de 5.000€</option>
+                              </select>
+                          </div>
+                          <div class="col-12">
+                              <label class="form-label">Demandes spéciales</label>
+                              <textarea class="form-control" name="special_requests" rows="4" placeholder="Régimes alimentaires, thème particulier..."></textarea>
+                          </div>
+                      </div>
+                      
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-outline-dore prev-step">
+                              <i class="fas fa-arrow-left me-2"></i> Précédent
+                          </button>
+                          <button type="button" class="btn btn-dore next-step">
+                              Suivant <i class="fas fa-arrow-right ms-2"></i>
+                          </button>
+                      </div>
+                  </div>
+  
+                  <!-- Étape 3 -->
+                  <div class="form-step" id="step3">
+                      <div class="form-header mb-4">
+                          <h3><i class="fas fa-check-circle me-2"></i>Confirmation</h3>
+                          <p>Vérifiez vos informations avant envoi</p>
+                      </div>
+                      
+                      <div class="confirmation-box mb-5">
+                          <h4 class="mb-4">Récapitulatif</h4>
+                          
+                          <div class="confirmation-item">
+                              <span>Nom :</span>
+                              <strong id="conf-nom">John Doe</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Email :</span>
+                              <strong id="conf-email">john@example.com</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Téléphone :</span>
+                              <strong id="conf-phone">+243 XX XXX XX XX</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Société :</span>
+                              <strong id="conf-company">Aucune</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Budget estimé :</span>
+                              <strong id="conf-budget">Non précisé</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Événement :</span>
+                              <strong id="conf-event">Mariage</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Date :</span>
+                              <strong id="conf-date">15/12/2023</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Invites :</span>
+                              <strong id="conf-guests">120 personnes</strong>
+                          </div>
+                          <div class="confirmation-item">
+                              <span>Demandes :</span>
+                              <strong id="conf-notes">Buffet végétarien optionnel</strong>
+                          </div>
+                      </div>
+                      
+                      <div class="form-check mb-4">
+                          <input class="form-check-input" type="checkbox" id="confirmationCheck" required>
+                          <label class="form-check-label" for="confirmationCheck">
+                              Je confirme que les informations ci-dessus sont exactes
+                          </label>
+                          <div class="invalid-feedback">Vous devez confirmer avant d'envoyer</div>
+                      </div>
+                      
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-outline-dore prev-step">
+                              <i class="fas fa-arrow-left me-2"></i> Précédent
+                          </button>
+                          <button type="submit" class="btn btn-dore">
+                              <i class="fas fa-paper-plane me-2"></i> Envoyer la demande
+                          </button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </section>
+  </main>
+
+<!-- Notification Toast -->
+<div id="reservationToast" class="reservation-toast">
+    <div class="toast-content">
+        <i class="fas fa-check-circle toast-icon success"></i>
+        <div class="toast-message">
+            <h4 class="toast-title">Réservation confirmée !</h4>
+            <p class="toast-text">Nous avons bien reçu votre demande et vous contacterons sous peu.</p>
+        </div>
+        <button class="toast-close">&times;</button>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <!--<script type="text/javascript" src="cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>-->
+    
+    <!-- JS Bootstrap 5.3.3 (avec Popper inclus) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--<script type="text/javascript" src="cdn_modules/font-awesome@6.7.2/js/all.min.js"></script>-->
+    
+    <!-- AOS Animation JS -->
+    <!--<script type="text/javascript" src="cdn_modules/aos@2.3.4/aos.js"></script>-->
+    
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navigation');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+
+    <script>
+      // Fonction de validation d'une étape
+      function validateStep(step) {
+        let isValid = true;
+        const inputs = step.querySelectorAll('[required]');
+        
+        inputs.forEach(input => {
+          if (!input.value) {
+            input.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            input.classList.remove('is-invalid');
+          }
+        });
+        
+        return isValid;
+      }
+      
+      // Fonction de mise à jour de la barre de progression
+      function updateProgressBar() {
+        const activeStep = document.querySelector('.form-step.active');
+        const stepNumber = parseInt(activeStep.id.replace('step', ''));
+        const progress = (stepNumber - 1) * 50;
+        document.querySelector('.progress-bar').style.width = `${progress}%`;
+        
+        document.querySelectorAll('.step').forEach((step, index) => {
+          step.classList.toggle('active', index < stepNumber);
+        });
+      }
+      
+      // Fonction de mise à jour du récapitulatif
+      function updateConfirmation() {
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        
+        const nom = step1.querySelector('input[placeholder="Votre nom"]').value;
+        const email = step1.querySelector('input[placeholder="votre@email.com"]').value;
+        const telephone = step1.querySelector('input[placeholder="+243 XX XXX XX XX"]').value;
+        const societe = step1.querySelector('input[placeholder="Nom de votre entreprise"]').value;
+        
+        const typeEvent = step2.querySelector('select').value;
+        const dateEvent = step2.querySelector('input[type="date"]').value;
+        const nbInvites = step2.querySelector('input[type="number"]').value;
+        const budget = step2.querySelectorAll('select')[1].value; // 2ème select = budget
+        const notes = step2.querySelector('textarea').value;
+        
+        const formattedDate = dateEvent ? new Date(dateEvent).toLocaleDateString('fr-FR') : 'Non spécifiée';
+        
+        document.getElementById('conf-nom').textContent = nom || 'Non spécifié';
+        document.getElementById('conf-email').textContent = email || 'Non spécifié';
+        document.getElementById('conf-phone').textContent = telephone || 'Non spécifié';
+        document.getElementById('conf-company').textContent = societe || 'Aucune';
+        document.getElementById('conf-event').textContent = typeEvent || 'Non spécifié';
+        document.getElementById('conf-date').textContent = formattedDate;
+        document.getElementById('conf-guests').textContent = nbInvites ? `${nbInvites} personnes` : 'Non précisé';
+        document.getElementById('conf-budget').textContent = budget || 'Non précisé';
+        document.getElementById('conf-notes').textContent = notes || 'Aucune demande particulière';
+      }
+      
+      // Gestion des boutons "Suivant"
+      document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const currentStep = this.closest('.form-step');
+          const nextStep = currentStep.nextElementSibling;
+          
+          if (validateStep(currentStep)) {
+            currentStep.style.animation = 'fadeOut 0.5s';
+            setTimeout(() => {
+              currentStep.classList.remove('active');
+              nextStep.classList.add('active');
+              updateProgressBar();
+              
+              if (nextStep.id === 'step3') {
+                updateConfirmation();
+              }
+            }, 500);
+          }
+        });
+      });
+      
+      // Gestion des boutons "Précédent"
+      document.querySelectorAll('.prev-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const currentStep = this.closest('.form-step');
+          const prevStep = currentStep.previousElementSibling;
+          
+          currentStep.style.animation = 'fadeOut 0.5s';
+          setTimeout(() => {
+            currentStep.classList.remove('active');
+            prevStep.classList.add('active');
+            updateProgressBar();
+          }, 500);
+        });
+      });
+      
+      // Initialisation au chargement
+      updateProgressBar();
+</script>
+    <!-- Script JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // Initialisation EmailJS
+      (function() {
+        emailjs.init('n_DTiH8tkR_m7eWUP');
+      })();
+      
+      // Fonction pour afficher la notification
+      function showReservationNotification(type = 'success', message = 'Nous avons bien reçu votre demande et vous contacterons sous peu.') {
+        const toast = document.getElementById('reservationToast');
+        const icon = toast.querySelector('.toast-icon');
+        const title = toast.querySelector('.toast-title');
+        const text = toast.querySelector('.toast-text');
+        
+        if (type === 'success') {
+          icon.className = 'fas fa-check-circle toast-icon success';
+          title.textContent = 'Réservation confirmée !';
+          toast.style.borderLeftColor = '#4CAF50';
+        } else {
+          icon.className = 'fas fa-times-circle toast-icon error';
+          title.textContent = 'Erreur de réservation';
+          toast.style.borderLeftColor = '#f44336';
+        }
+        
+        text.textContent = message;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 6000);
+      }
+      
+      // Fermeture de la notification
+      document.querySelector('#reservationToast .toast-close')?.addEventListener('click', function() {
+        document.getElementById('reservationToast').classList.remove('show');
+      });
+      
+      // Fonctions du formulaire
+      function validateStep(step) {
+        let isValid = true;
+        const inputs = step.querySelectorAll('[required]');
+        
+        inputs.forEach(input => {
+          if (input.id === 'confirmationCheck') {
+            if (!input.checked) {
+              input.classList.add('is-invalid', 'confirmation-error');
+              setTimeout(() => input.classList.remove('confirmation-error'), 500);
+              isValid = false;
+            } else {
+              input.classList.remove('is-invalid');
+            }
+          }
+          else if (!input.value && input.required) {
+            input.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            input.classList.remove('is-invalid');
+          }
+        });
+        
+        return isValid;
+      }
+      
+      function updateProgressBar() {
+        const activeStep = document.querySelector('.form-step.active');
+        const stepNumber = parseInt(activeStep.id.replace('step', ''));
+        const progress = (stepNumber - 1) * 50;
+        document.querySelector('.progress-bar').style.width = `${progress}%`;
+        
+        document.querySelectorAll('.step').forEach((step, index) => {
+          step.classList.toggle('active', index < stepNumber);
+        });
+      }
+      
+      function updateConfirmation() {
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        
+        const nom = step1.querySelector('input[name="fullname"]').value;
+        const email = step1.querySelector('input[name="email"]').value;
+        const telephone = step1.querySelector('input[name="phone"]').value;
+        const societe = step1.querySelector('input[name="company"]').value;
+        
+        const typeEvent = step2.querySelector('select[name="event_type"]').value;
+        const dateEvent = step2.querySelector('input[name="event_date"]').value;
+        const nbInvites = step2.querySelector('input[name="guests"]').value;
+        const budget = step2.querySelector('select[name="budget"]').value;
+        const notes = step2.querySelector('textarea[name="special_requests"]').value;
+        
+        const formattedDate = dateEvent ? new Date(dateEvent).toLocaleDateString('fr-FR') : 'Non spécifiée';
+        
+        document.getElementById('conf-nom').textContent = nom || 'Non spécifié';
+        document.getElementById('conf-email').textContent = email || 'Non spécifié';
+        document.getElementById('conf-phone').textContent = telephone || 'Non spécifié';
+        document.getElementById('conf-company').textContent = societe || 'Aucune';
+        document.getElementById('conf-event').textContent = typeEvent || 'Non spécifié';
+        document.getElementById('conf-date').textContent = formattedDate;
+        document.getElementById('conf-guests').textContent = nbInvites ? `${nbInvites} personnes` : 'Non précisé';
+        document.getElementById('conf-budget').textContent = budget || 'Non précisé';
+        document.getElementById('conf-notes').textContent = notes || 'Aucune demande particulière';
+      }
+      
+      // Gestion des étapes
+      document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const currentStep = this.closest('.form-step');
+          const nextStep = currentStep.nextElementSibling;
+          
+          if (validateStep(currentStep)) {
+            currentStep.style.animation = 'fadeOut 0.5s';
+            setTimeout(() => {
+              currentStep.classList.remove('active');
+              nextStep.classList.add('active');
+              updateProgressBar();
+              
+              if (nextStep.id === 'step3') {
+                updateConfirmation();
+              }
+            }, 500);
+          }
+        });
+      });
+      
+      document.querySelectorAll('.prev-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const currentStep = this.closest('.form-step');
+          const prevStep = currentStep.previousElementSibling;
+          
+          currentStep.style.animation = 'fadeOut 0.5s';
+          setTimeout(() => {
+            currentStep.classList.remove('active');
+            prevStep.classList.add('active');
+            updateProgressBar();
+          }, 500);
+        });
+      });
+      
+      // Soumission du formulaire
+      document.getElementById('reservationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!validateStep(document.getElementById('step3'))) {
+          showReservationNotification('error', 'Veuillez confirmer que les informations sont correctes');
+          return;
+        }
+        
+        const submitBtn = this.querySelector('#step3 button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Traitement...';
+        submitBtn.disabled = true;
+        
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+        
+        emailjs.send('service_73vh3vo', 'template_q8a9sar', data)
+          .then(() => {
+            showReservationNotification();
+            this.reset();
+            document.querySelectorAll('.form-step').forEach(step => {
+              step.classList.remove('active');
+            });
+            document.getElementById('step1').classList.add('active');
+            updateProgressBar();
+          })
+          .catch(error => {
+            console.error('Erreur:', error);
+            showReservationNotification('error', 'Une erreur est survenue. Veuillez réessayer.');
+          })
+          .finally(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+      
+      // Initialisation
+      updateProgressBar();
+    </script>
+
+<style>
+    /* Styles pour les erreurs de validation */
+    .invalid-feedback {
+        color: #dc3545;
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+    }
+    
+    .is-invalid {
+        border-color: #dc3545 !important;
+    }
+    
+    .form-check-input.is-invalid {
+        outline: 2px solid #dc3545;
+    }
+    
+    /* Animation pour la case de confirmation */
+    .confirmation-error {
+        animation: shake 0.5s ease-in-out;
+    }
+    
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        20%, 60% { transform: translateX(-5px); }
+        40%, 80% { transform: translateX(5px); }
+    }
+</style>
+</body>
+</html>

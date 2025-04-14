@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos | Chris Traiteur – Spécialiste Événements à Kinshasa depuis 2010</title>
+  <meta name="description" content="Chris Traiteur, traiteur professionnel à Kinshasa depuis 10 ans. Découvrez notre histoire, notre équipe et notre engagement pour des événements culinaires mémorables.">
+  <meta name="keywords" content="traiteur Kinshasa, histoire Chris Traiteur, équipe traiteur, valeurs culinaires">
+  <link rel="canonical" href="https://www.christraiteur-kinshasa.com/a-propos">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Notre Histoire | Chris Traiteur – Kinshasa">
+  <meta property="og:description" content="Traiteur passionné à Kinshasa, nous créons des expériences culinaires uniques pour vos événements depuis 2010.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.christraiteur-kinshasa.com/a-propos">
+  <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/equipe-chris-traiteur.jpg">
+  
+  <!-- Préchargements -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Chris Traiteur",
+      "description": "Traiteur professionnel à Kinshasa, spécialisé dans les mariages, séminaires et événements privés.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kinshasa",
+        "addressRegion": "Gombe",
+        "addressCountry": "CD"
+      },
+      "telephone": "+243 XX XXX XX XX",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "foundingDate": "2015"
+    }
+  </script>
+    <style>
+        /* Styles pour la page À Propos */
+        .about-hero {
+            background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(139, 0, 0, 0.85)), 
+                        url('../assets/about-bg.jpg') center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            margin-top: 85.5px;
+            margin-bottom: 50px;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .about-text {
+            padding: 40px;
+        }
+        
+        .about-title {
+            color: var(--rouge-vin);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .team-section {
+            background: var(--gris-clair);
+            padding: 80px 0;
+        }
+        
+        .team-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 25px 20px;
+        }
+        
+        .team-name {
+            color: var(--rouge-vin);
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--dore);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .values-section {
+            padding: 80px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--dore);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+        }
+        
+        .value-title {
+            color: var(--rouge-vin);
+            margin-bottom: 15px;
+        }
+        
+        .timeline-section {
+            background: var(--gris-clair);
+            padding: 80px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background: var(--dore);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .timeline-date {
+            color: var(--dore);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -15px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--rouge-vin);
+            border: 3px solid var(--dore);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: 55px;
+                top: -15px;
+                border-width: 0 15px 15px 15px;
+                border-color: transparent transparent white transparent;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link active" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-about">
+        <!-- Hero Section -->
+        <section class="about-hero" data-aos="fade">
+            <div class="container">
+                <h1 class="mb-4">Notre Histoire</h1>
+                <p class="lead">Une passion pour l'excellence culinaire depuis 2015</p>
+            </div>
+        </section>
+
+        <!-- Notre Histoire -->
+        <section class="about-section">
+            <div class="container about-content">
+                <div class="about-card" data-aos="fade-up">
+                    <img src="assets/about-story.jpg" class="about-img" alt="Fondateur Chris Traiteur">
+                    <div class="about-text">
+                        <h2 class="about-title">L'Histoire de Chris Traiteur</h2>
+                        <p>Fondé en 2015 par Christophe Mbayo, passionné de cuisine depuis son enfance à Kinshasa, Chris Traiteur est né d'une volonté de marier traditions culinaires congolaises et techniques gastronomiques modernes.</p>
+                        <p>Ce qui a commencé comme un petit service de traiteur pour des événements privés s'est rapidement transformé en une entreprise florissante reconnue pour son excellence et son service personnalisé.</p>
+                        <p>Aujourd'hui, notre équipe de 15 professionnels passionnés a le plaisir de servir plus de 200 événements par an, allant des mariages intimes aux grands galas d'entreprise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notre Équipe -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="team-title" data-aos="fade-up">Notre Équipe d'Exception</h2>
+                <div class="team-grid">
+                    <!-- Membre 1 -->
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/team/chef1.jpg" class="team-img" alt="Chef Christophe">
+                        <div class="team-info">
+                            <h3 class="team-name">Christophe Mbayo</h3>
+                            <p class="team-role">Fondateur & Chef Exécutif</p>
+                            <p>15 ans d'expérience en gastronomie congolaise et internationale</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 2 -->
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/team/chef2.jpg" class="team-img" alt="Chef Adeline">
+                        <div class="team-info">
+                            <h3 class="team-name">Adeline Kabasele</h3>
+                            <p class="team-role">Chef Pâtissier</p>
+                            <p>Spécialiste des desserts fusion tradition-modern</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 3 -->
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets/team/manager.jpg" class="team-img" alt="Manager">
+                        <div class="team-info">
+                            <h3 class="team-name">David Lumumba</h3>
+                            <p class="team-role">Directeur Événements</p>
+                            <p>Organisation impeccable depuis 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nos Valeurs -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Nos Valeurs Fondamentales</h2>
+                <div class="values-grid">
+                    <!-- Valeur 1 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="value-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="value-title">Produits Locaux</h3>
+                        <p>Nous travaillons exclusivement avec des producteurs locaux pour des ingrédients frais et de saison, soutenant ainsi l'économie régionale.</p>
+                    </div>
+                    
+                    <!-- Valeur 2 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Passion Authentique</h3>
+                        <p>Chaque plat est préparé avec le même amour et la même attention que pour notre propre famille.</p>
+                    </div>
+                    
+                    <!-- Valeur 3 -->
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="value-title">Excellence</h3>
+                        <p>Nous ne nous contentons pas de bien faire, nous visons l'exceptionnel dans chaque détail.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notre Histoire (Timeline) -->
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Notre Parcours</h2>
+                <div class="timeline">
+                    <!-- Étape 1 -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2015</div>
+                            <h3>Fondation</h3>
+                            <p>Christophe commence son activité avec 2 employés et une petite cuisine à Kinshasa.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Étape 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2017</div>
+                            <h3>Premier Grand Événement</h3>
+                            <p>Organisation d'un mariage pour 200 personnes avec un menu 100% congolais revisité.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Étape 3 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2019</div>
+                            <h3>Nouvelle Cuisine</h3>
+                            <p>Déménagement dans un espace professionnel avec équipement haut de gamme.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Étape 4 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023</div>
+                            <h3>Reconnaissance</h3>
+                            <p>Prix du "Meilleur Traiteur de Kinshasa" décerné par le Guide Gastronomique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-5 bg-rouge-vin text-white">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="mb-4">Prêt à créer un événement mémorable ?</h2>
+                <a href="contact.html" class="btn btn-dore btn-lg">Contactez-nous</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <!--<script type="text/javascript" src="cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>-->
+    
+    <!-- JS Bootstrap 5.3.3 (avec Popper inclus) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--<script type="text/javascript" src="cdn_modules/font-awesome@6.7.2/js/all.min.js"></script>-->
+    
+    <!-- AOS Animation JS -->
+    <!--<script type="text/javascript" src="cdn_modules/aos@2.3.4/aos.js"></script>-->
+    
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navigation');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+</body>
+</html>

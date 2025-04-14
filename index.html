@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Traiteur | Traiteur Événements & Réceptions à Kinshasa | Buffets Haut de Gamme</title>
+    <meta name="description" content="Traiteur professionnel à Kinshasa pour mariages, séminaires et événements. Cuisine raffinée, service sur mesure et décoration élégante. Demandez un devis gratuit !">
+    <meta name="keywords" content="traiteur Kinshasa, buffet mariage, événement entreprise, réception, cuisine raffinée, service traiteur">
+    <meta name="author" content="Dylan Ndjoko Nyami">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.christraiteur-kinshasa.com" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Chris Traiteur | Traiteur Événements à Kinshasa">
+    <meta property="og:description" content="Service traiteur haut de gamme pour vos événements à Kinshasa. Cuisine créative et présentation soignée.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.christraiteur-kinshasa.com">
+    <meta property="og:image" content="https://www.christraiteur-kinshasa.com/images/photo-plat-signature.jpg">
+    <meta property="og:site_name" content="Chris Traiteur">
+    
+    <!-- Préchargement des ressources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"></noscript>
+    
+    <!-- CSS Bootstrap 5.3.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6.7.2 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Chris Traiteur",
+      "image": "https://www.christraiteur-kinshasa.com/images/logo.jpg",
+      "telephone": "+243 XX XXX XX XX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gombe",
+        "addressLocality": "Kinshasa",
+        "addressCountry": "CD"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Styles spécifiques à l'accueil */
+        .hero-section {
+            height: 100vh;
+            min-height: 800px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('../assets/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            line-height: 1.2;
+            color: #D4AF37;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .btn-hero {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0 15px;
+            transition: all 0.4s;
+        }
+        
+        .btn-hero-primary {
+            background: var(--dore);
+            color: var(--rouge-vin);
+            border: none;
+        }
+        
+        .btn-hero-primary:hover {
+            background: var(--dore-clair);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-hero-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-20px) translateX(-50%);}
+            60% {transform: translateY(-10px) translateX(-50%);}
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--dore);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.4s;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-bottom-color: var(--dore);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--rouge-vin);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            margin: 20px;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--dore);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .instagram-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .instagram-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .instagram-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(139, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-hero {
+                margin: 5px 0;
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html" data-aos="fade-right">
+          <span class="texte-dore"><i class="fas fa-utensils me-2"></i>Chris</span> Traiteur
+        </a>
+        <button class="bouton-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="menu collapse navbar-collapse" id="menuPrincipal">
+          <ul class="liste-menu navbar-nav ms-auto">
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="100"><a class="lien-menu nav-link active" href="index.html">Accueil</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="150"><a class="lien-menu nav-link" href="a-propos.html">À propos</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="200"><a class="lien-menu nav-link" href="services.html">Services</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="250"><a class="lien-menu nav-link" href="menu.html">Menu</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="300"><a class="lien-menu nav-link" href="galerie.html">Galerie</a></li>
+            <li class="item-menu nav-item" data-aos="fade-left" data-aos-delay="350"><a class="lien-menu nav-link btn-reserver" href="réservation.html">Réserver</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Optionnel : Vidéo de fond -->
+        <!-- <video autoplay muted loop class="hero-video">
+            <source src="assets/video/hero-video.mp4" type="video/mp4">
+        </video> -->
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="300">
+                <h1 class="hero-title">L'Art du Traiteur à Kinshasa</h1>
+                <p class="hero-subtitle">Événements mémorables, saveurs exceptionnelles</p>
+                <div class="hero-buttons">
+                    <a href="réservation.html" class="btn btn-hero btn-hero-primary">Réserver</a>
+                    <a href="menu.html" class="btn btn-hero btn-hero-secondary">Découvrir le menu</a>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#features" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Pourquoi Nous Choisir ?</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Excellence Culinaire</h3>
+                        <p>Des chefs expérimentés, des produits frais et locaux, une cuisine raffinée qui marie tradition et innovation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Service Complet</h3>
+                        <p>De la conception du menu à la décoration, en passant par le service, nous gérons tout pour votre événement.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Événements Sur Mesure</h3>
+                        <p>Chaque détail est personnalisé pour créer une expérience unique qui vous ressemble.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Nos Services</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="service-preview-card">
+                        <img src="assets/service-wedding.jpg" alt="Mariage" class="img-fluid rounded">
+                        <div class="service-preview-content">
+                            <h3>Mariages</h3>
+                            <p>Un buffet somptueux pour votre grand jour</p>
+                            <a href="services.html#wedding" class="btn btn-outline-dore">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-preview-card">
+                        <img src="assets/service-corporate.jpg" alt="Entreprise" class="img-fluid rounded">
+                        <div class="service-preview-content">
+                            <h3>Événements d'Entreprise</h3>
+                            <p>Des solutions professionnelles pour vos réceptions</p>
+                            <a href="services.html#corporate" class="btn btn-outline-dore">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="service-preview-card">
+                        <img src="assets/service-private.jpg" alt="Privé" class="img-fluid rounded">
+                        <div class="service-preview-content">
+                            <h3>Événements Privés</h3>
+                            <p>Anniversaires, fêtes familiales et cocktails</p>
+                            <a href="services.html#private" class="btn btn-outline-dore">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="services.html" class="btn btn-dore btn-lg">Voir tous nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Ils Nous Ont Fait Confiance</h2>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            Le buffet était absolument divin ! Nos invités n'ont cessé de complimenter la qualité des plats et le service impeccable.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client1.jpg" alt="Sarah K.">
+                            <div>
+                                <h4>Sarah K.</h4>
+                                <small>Mariage Juin 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            Professionnalisme et créativité au rendez-vous. Notre événement corporate a été sublimé par les créations culinaires de Chris Traiteur.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client2.jpg" alt="Marc T.">
+                            <div>
+                                <h4>Marc T.</h4>
+                                <small>Lancement de produit</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            Pour les 50 ans de ma mère, ils ont préparé un festin traditionnel qui a ému toute la famille. Un service vraiment personnalisé.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/client3.jpg" alt="Familie B.">
+                            <div>
+                                <h4>Famille B.</h4>
+                                <small>Anniversaire</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="py-5">
+      <div class="container py-5">
+        <h2 class="section-title" data-aos="fade-up">Suivez-nous sur Instagram</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">@ChrisTraiteurKinshasa</p>
+        
+        <div class="instagram-feed">
+          <!-- Image 1 -->
+          <div class="instagram-item" data-aos="zoom-in">
+            <img src="assets/instagram/insta1.jpg" alt="Notre cuisine">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+          
+          <!-- Image 2 -->
+          <div class="instagram-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/instagram/insta2.jpg" alt="Plat délicieux">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+          
+          <!-- Image 3 -->
+          <div class="instagram-item" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/instagram/insta3.jpg" alt="Événement spécial">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+          
+          <!-- Image 4 -->
+          <div class="instagram-item" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/instagram/insta4.jpg" alt="Buffet varié">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+          
+          <!-- Image 5 -->
+          <div class="instagram-item" data-aos="zoom-in" data-aos-delay="400">
+            <img src="assets/instagram/insta5.jpg" alt="Décoration">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+          
+          <!-- Image 6 -->
+          <div class="instagram-item" data-aos="zoom-in" data-aos-delay="500">
+            <img src="assets/instagram/insta6.jpg" alt="Service traiteur">
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram fa-3x text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-rouge-vin text-white">
+        <div class="container py-5 text-center">
+            <h2 class="mb-4" data-aos="fade-up">Prêt à organiser votre événement ?</h2>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Contactez-nous pour un devis personnalisé</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="réservation.html" class="btn btn-dore btn-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-calendar-alt me-2"></i>Réserver
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-envelope me-2"></i>Nous écrire
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pied-de-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h3 class="titre-footer mb-4">Chris Traiteur</h3>
+            <p>Spécialiste en traiteur événementiel à Kinshasa depuis 2015.</p>
+            <div class="reseaux-sociaux mt-3">
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="lien-reseau me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+              <a href="#" class="lien-reseau"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="titre-footer mb-4">Liens Rapides</h3>
+            <ul class="liste-footer">
+              <li><a href="menu.html"><i class="fas fa-chevron-right me-2"></i>Notre Menu</a></li>
+              <li><a href="galerie.html"><i class="fas fa-chevron-right me-2"></i>Galerie</a></li>
+              <li><a href="a-propos.html"><i class="fas fa-chevron-right me-2"></i>À propos</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right me-2"></i>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="titre-footer mb-4">Contact</h3>
+            <ul class="liste-contact">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Kinshasa, Gombe</li>
+              <li><i class="fas fa-phone me-2"></i> +243 XX XXX XX XX</li>
+              <li><i class="fas fa-envelope me-2"></i> contact@christraiteur.cd</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center py-3">
+          <p class="mb-0">&copy; 2025 Chris Traiteur. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      // Initialisation AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+</body>
+</html>
